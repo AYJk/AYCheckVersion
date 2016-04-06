@@ -1,0 +1,533 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		251AD21A1CB5549D00DB55A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 251AD2191CB5549D00DB55A9 /* main.m */; };
+		251AD21D1CB5549D00DB55A9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 251AD21C1CB5549D00DB55A9 /* AppDelegate.m */; };
+		251AD2201CB5549D00DB55A9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 251AD21F1CB5549D00DB55A9 /* ViewController.m */; };
+		251AD2231CB5549D00DB55A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 251AD2211CB5549D00DB55A9 /* Main.storyboard */; };
+		251AD2251CB5549D00DB55A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 251AD2241CB5549D00DB55A9 /* Assets.xcassets */; };
+		251AD2281CB5549D00DB55A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 251AD2261CB5549D00DB55A9 /* LaunchScreen.storyboard */; };
+		251AD2331CB5549E00DB55A9 /* AYCheckVersionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 251AD2321CB5549E00DB55A9 /* AYCheckVersionTests.m */; };
+		251AD23E1CB5549E00DB55A9 /* AYCheckVersionUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 251AD23D1CB5549E00DB55A9 /* AYCheckVersionUITests.m */; };
+		251AD2541CB5557500DB55A9 /* AYCheckManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 251AD2531CB5557500DB55A9 /* AYCheckManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		251AD22F1CB5549E00DB55A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 251AD20D1CB5549D00DB55A9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 251AD2141CB5549D00DB55A9;
+			remoteInfo = AYCheckVersion;
+		};
+		251AD23A1CB5549E00DB55A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 251AD20D1CB5549D00DB55A9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 251AD2141CB5549D00DB55A9;
+			remoteInfo = AYCheckVersion;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		251AD2151CB5549D00DB55A9 /* AYCheckVersion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AYCheckVersion.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		251AD2191CB5549D00DB55A9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		251AD21B1CB5549D00DB55A9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		251AD21C1CB5549D00DB55A9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		251AD21E1CB5549D00DB55A9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		251AD21F1CB5549D00DB55A9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		251AD2221CB5549D00DB55A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		251AD2241CB5549D00DB55A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		251AD2271CB5549D00DB55A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		251AD2291CB5549D00DB55A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		251AD22E1CB5549E00DB55A9 /* AYCheckVersionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AYCheckVersionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		251AD2321CB5549E00DB55A9 /* AYCheckVersionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AYCheckVersionTests.m; sourceTree = "<group>"; };
+		251AD2341CB5549E00DB55A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		251AD2391CB5549E00DB55A9 /* AYCheckVersionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AYCheckVersionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		251AD23D1CB5549E00DB55A9 /* AYCheckVersionUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AYCheckVersionUITests.m; sourceTree = "<group>"; };
+		251AD23F1CB5549E00DB55A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		251AD2521CB5557500DB55A9 /* AYCheckManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYCheckManager.h; sourceTree = "<group>"; };
+		251AD2531CB5557500DB55A9 /* AYCheckManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYCheckManager.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		251AD2121CB5549D00DB55A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		251AD22B1CB5549E00DB55A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		251AD2361CB5549E00DB55A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		251AD20C1CB5549D00DB55A9 = {
+			isa = PBXGroup;
+			children = (
+				251AD2171CB5549D00DB55A9 /* AYCheckVersion */,
+				251AD2311CB5549E00DB55A9 /* AYCheckVersionTests */,
+				251AD23C1CB5549E00DB55A9 /* AYCheckVersionUITests */,
+				251AD2161CB5549D00DB55A9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		251AD2161CB5549D00DB55A9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				251AD2151CB5549D00DB55A9 /* AYCheckVersion.app */,
+				251AD22E1CB5549E00DB55A9 /* AYCheckVersionTests.xctest */,
+				251AD2391CB5549E00DB55A9 /* AYCheckVersionUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		251AD2171CB5549D00DB55A9 /* AYCheckVersion */ = {
+			isa = PBXGroup;
+			children = (
+				251AD24B1CB554BE00DB55A9 /* Classes */,
+				251AD21B1CB5549D00DB55A9 /* AppDelegate.h */,
+				251AD21C1CB5549D00DB55A9 /* AppDelegate.m */,
+				251AD21E1CB5549D00DB55A9 /* ViewController.h */,
+				251AD21F1CB5549D00DB55A9 /* ViewController.m */,
+				251AD2211CB5549D00DB55A9 /* Main.storyboard */,
+				251AD2241CB5549D00DB55A9 /* Assets.xcassets */,
+				251AD2261CB5549D00DB55A9 /* LaunchScreen.storyboard */,
+				251AD2291CB5549D00DB55A9 /* Info.plist */,
+				251AD2181CB5549D00DB55A9 /* Supporting Files */,
+			);
+			path = AYCheckVersion;
+			sourceTree = "<group>";
+		};
+		251AD2181CB5549D00DB55A9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				251AD2191CB5549D00DB55A9 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		251AD2311CB5549E00DB55A9 /* AYCheckVersionTests */ = {
+			isa = PBXGroup;
+			children = (
+				251AD2321CB5549E00DB55A9 /* AYCheckVersionTests.m */,
+				251AD2341CB5549E00DB55A9 /* Info.plist */,
+			);
+			path = AYCheckVersionTests;
+			sourceTree = "<group>";
+		};
+		251AD23C1CB5549E00DB55A9 /* AYCheckVersionUITests */ = {
+			isa = PBXGroup;
+			children = (
+				251AD23D1CB5549E00DB55A9 /* AYCheckVersionUITests.m */,
+				251AD23F1CB5549E00DB55A9 /* Info.plist */,
+			);
+			path = AYCheckVersionUITests;
+			sourceTree = "<group>";
+		};
+		251AD24B1CB554BE00DB55A9 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				251AD2521CB5557500DB55A9 /* AYCheckManager.h */,
+				251AD2531CB5557500DB55A9 /* AYCheckManager.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		251AD2141CB5549D00DB55A9 /* AYCheckVersion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 251AD2421CB5549E00DB55A9 /* Build configuration list for PBXNativeTarget "AYCheckVersion" */;
+			buildPhases = (
+				251AD2111CB5549D00DB55A9 /* Sources */,
+				251AD2121CB5549D00DB55A9 /* Frameworks */,
+				251AD2131CB5549D00DB55A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AYCheckVersion;
+			productName = AYCheckVersion;
+			productReference = 251AD2151CB5549D00DB55A9 /* AYCheckVersion.app */;
+			productType = "com.apple.product-type.application";
+		};
+		251AD22D1CB5549E00DB55A9 /* AYCheckVersionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 251AD2451CB5549E00DB55A9 /* Build configuration list for PBXNativeTarget "AYCheckVersionTests" */;
+			buildPhases = (
+				251AD22A1CB5549E00DB55A9 /* Sources */,
+				251AD22B1CB5549E00DB55A9 /* Frameworks */,
+				251AD22C1CB5549E00DB55A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				251AD2301CB5549E00DB55A9 /* PBXTargetDependency */,
+			);
+			name = AYCheckVersionTests;
+			productName = AYCheckVersionTests;
+			productReference = 251AD22E1CB5549E00DB55A9 /* AYCheckVersionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		251AD2381CB5549E00DB55A9 /* AYCheckVersionUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 251AD2481CB5549E00DB55A9 /* Build configuration list for PBXNativeTarget "AYCheckVersionUITests" */;
+			buildPhases = (
+				251AD2351CB5549E00DB55A9 /* Sources */,
+				251AD2361CB5549E00DB55A9 /* Frameworks */,
+				251AD2371CB5549E00DB55A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				251AD23B1CB5549E00DB55A9 /* PBXTargetDependency */,
+			);
+			name = AYCheckVersionUITests;
+			productName = AYCheckVersionUITests;
+			productReference = 251AD2391CB5549E00DB55A9 /* AYCheckVersionUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		251AD20D1CB5549D00DB55A9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = AYJkdev;
+				TargetAttributes = {
+					251AD2141CB5549D00DB55A9 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					251AD22D1CB5549E00DB55A9 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 251AD2141CB5549D00DB55A9;
+					};
+					251AD2381CB5549E00DB55A9 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 251AD2141CB5549D00DB55A9;
+					};
+				};
+			};
+			buildConfigurationList = 251AD2101CB5549D00DB55A9 /* Build configuration list for PBXProject "AYCheckVersion" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 251AD20C1CB5549D00DB55A9;
+			productRefGroup = 251AD2161CB5549D00DB55A9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				251AD2141CB5549D00DB55A9 /* AYCheckVersion */,
+				251AD22D1CB5549E00DB55A9 /* AYCheckVersionTests */,
+				251AD2381CB5549E00DB55A9 /* AYCheckVersionUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		251AD2131CB5549D00DB55A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				251AD2281CB5549D00DB55A9 /* LaunchScreen.storyboard in Resources */,
+				251AD2251CB5549D00DB55A9 /* Assets.xcassets in Resources */,
+				251AD2231CB5549D00DB55A9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		251AD22C1CB5549E00DB55A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		251AD2371CB5549E00DB55A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		251AD2111CB5549D00DB55A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				251AD2201CB5549D00DB55A9 /* ViewController.m in Sources */,
+				251AD21D1CB5549D00DB55A9 /* AppDelegate.m in Sources */,
+				251AD2541CB5557500DB55A9 /* AYCheckManager.m in Sources */,
+				251AD21A1CB5549D00DB55A9 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		251AD22A1CB5549E00DB55A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				251AD2331CB5549E00DB55A9 /* AYCheckVersionTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		251AD2351CB5549E00DB55A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				251AD23E1CB5549E00DB55A9 /* AYCheckVersionUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		251AD2301CB5549E00DB55A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 251AD2141CB5549D00DB55A9 /* AYCheckVersion */;
+			targetProxy = 251AD22F1CB5549E00DB55A9 /* PBXContainerItemProxy */;
+		};
+		251AD23B1CB5549E00DB55A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 251AD2141CB5549D00DB55A9 /* AYCheckVersion */;
+			targetProxy = 251AD23A1CB5549E00DB55A9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		251AD2211CB5549D00DB55A9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				251AD2221CB5549D00DB55A9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		251AD2261CB5549D00DB55A9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				251AD2271CB5549D00DB55A9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		251AD2401CB5549E00DB55A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		251AD2411CB5549E00DB55A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		251AD2431CB5549E00DB55A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = AYCheckVersion/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ayjkdev.AYCheckVersion;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		251AD2441CB5549E00DB55A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = AYCheckVersion/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ayjkdev.AYCheckVersion;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		251AD2461CB5549E00DB55A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = AYCheckVersionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ayjkdev.AYCheckVersionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AYCheckVersion.app/AYCheckVersion";
+			};
+			name = Debug;
+		};
+		251AD2471CB5549E00DB55A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = AYCheckVersionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ayjkdev.AYCheckVersionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AYCheckVersion.app/AYCheckVersion";
+			};
+			name = Release;
+		};
+		251AD2491CB5549E00DB55A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = AYCheckVersionUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ayjkdev.AYCheckVersionUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = AYCheckVersion;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		251AD24A1CB5549E00DB55A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = AYCheckVersionUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ayjkdev.AYCheckVersionUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = AYCheckVersion;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		251AD2101CB5549D00DB55A9 /* Build configuration list for PBXProject "AYCheckVersion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				251AD2401CB5549E00DB55A9 /* Debug */,
+				251AD2411CB5549E00DB55A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		251AD2421CB5549E00DB55A9 /* Build configuration list for PBXNativeTarget "AYCheckVersion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				251AD2431CB5549E00DB55A9 /* Debug */,
+				251AD2441CB5549E00DB55A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		251AD2451CB5549E00DB55A9 /* Build configuration list for PBXNativeTarget "AYCheckVersionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				251AD2461CB5549E00DB55A9 /* Debug */,
+				251AD2471CB5549E00DB55A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		251AD2481CB5549E00DB55A9 /* Build configuration list for PBXNativeTarget "AYCheckVersionUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				251AD2491CB5549E00DB55A9 /* Debug */,
+				251AD24A1CB5549E00DB55A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 251AD20D1CB5549D00DB55A9 /* Project object */;
+}
