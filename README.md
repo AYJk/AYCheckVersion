@@ -11,6 +11,8 @@
 
 This is a utility class to check version from AppStore. 
 
+![两个按钮情况](http://7xrofo.com1.z0.glb.clouddn.com/Simulator%20Screen%20Shot%202016%E5%B9%B44%E6%9C%887%E6%97%A5%20%E4%B8%8B%E5%8D%8811.24.14.png)        ![三个按钮情况](http://7xrofo.com1.z0.glb.clouddn.com/Simulator%20Screen%20Shot%202016%E5%B9%B44%E6%9C%887%E6%97%A5%20%E4%B8%8B%E5%8D%8811.25.06.png)
+
 # Installtion
 The preferred way of installtion is via [CocoaPods](http://cocoapods.org/)
 
