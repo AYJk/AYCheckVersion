@@ -5,7 +5,8 @@
 ![CocoaPods Version](https://img.shields.io/badge/pod-v1.0.0-brightgreen.svg)
 [![BLOG](https://img.shields.io/badge/blog-ayjkdev.top-orange.svg)](http://ayjkdev.top/)&nbsp;
 
-
+我的博客中有详尽的实现过程和相关说明：
+[iOS利用iTunesLookup检查更新](http://ayjkdev.top/2016/04/06/update-in-app-with-itunes-lookup/)
 [中文介绍](https://github.com/AYJk/AYCheckVersion#中文介绍)
 
 This is a utility class to check version from AppStore. 
