@@ -427,7 +427,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AYCheckVersion/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ayjkdev.AYCheckVersion;
+				PRODUCT_BUNDLE_IDENTIFIER = com.facebook.Facebook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -438,7 +438,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AYCheckVersion/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ayjkdev.AYCheckVersion;
+				PRODUCT_BUNDLE_IDENTIFIER = com.facebook.Facebook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -510,6 +510,7 @@
 				251AD2441CB5549E00DB55A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		251AD2451CB5549E00DB55A9 /* Build configuration list for PBXNativeTarget "AYCheckVersionTests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +519,7 @@
 				251AD2471CB5549E00DB55A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		251AD2481CB5549E00DB55A9 /* Build configuration list for PBXNativeTarget "AYCheckVersionUITests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +528,7 @@
 				251AD24A1CB5549E00DB55A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
