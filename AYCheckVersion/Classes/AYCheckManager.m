@@ -31,7 +31,7 @@
 @implementation AYCheckManager
 
 static AYCheckManager *checkManager = nil;
-+ (instancetype)shareCheckManager {
++ (instancetype)sharedCheckManager {
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -82,6 +82,7 @@ static AYCheckManager *checkManager = nil;
             NSDictionary *responseDic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
             NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
             if ([responseDic[@"resultCount"] intValue] == 1) {
+                
                 NSArray *results = responseDic[@"results"];
                 NSDictionary *resultDic = [results firstObject];
                 [userDefault setObject:resultDic[@"version"] forKey:APP_LAST_VERSION];
@@ -91,13 +92,20 @@ static AYCheckManager *checkManager = nil;
                 if ([resultDic[@"version"] isEqualToString:CURRENT_VERSION] || ![[userDefault objectForKey:SKIP_VERSION] isEqualToString:resultDic[@"version"]]) {
                     [userDefault setBool:NO forKey:SKIP_CURRENT_VERSION];
                 }
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    
+                    if (![[userDefault objectForKey:SKIP_CURRENT_VERSION] boolValue]) {
+                        NSArray *AppStoreVersionArray = [resultDic[@"version"] componentsSeparatedByString:@"."];
+                        NSArray *localVersionArray = [CURRENT_VERSION componentsSeparatedByString:@"."];
+                        for (int index = 0; index < AppStoreVersionArray.count; index ++) {
+                            if ([AppStoreVersionArray[index] intValue] > [localVersionArray[index] intValue]) {
+                                [self compareWithCurrentVersion];
+                                break;
+                            }
+                        }
+                    }
+                });
             }
-            dispatch_async(dispatch_get_main_queue(), ^{
-//                NSLog(NSString * _Nonnull format, ...)
-                if (![[userDefault objectForKey:SKIP_CURRENT_VERSION] boolValue] && ![[userDefault objectForKey:APP_LAST_VERSION] isEqualToString:CURRENT_VERSION]) {
-                    [self compareWithCurrentVersion];
-                }
-            });
             NSLog(@"%@   %@",[userDefault objectForKey:APP_LAST_VERSION],[userDefault objectForKey:APP_RELEASE_NOTES]);
         }
     }];

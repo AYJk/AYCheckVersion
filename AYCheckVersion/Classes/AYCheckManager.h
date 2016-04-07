@@ -18,7 +18,7 @@
 /**
  *  get a singleton of the Check Manager
  */
-+ (instancetype)shareCheckManager;
++ (instancetype)sharedCheckManager;
 /**
  *  start check version with default param.
  */

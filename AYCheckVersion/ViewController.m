@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    AYCheckManager *checkManger = [AYCheckManager shareCheckManager];
+    AYCheckManager *checkManger = [AYCheckManager sharedCheckManager];
     checkManger.countryAbbreviation = @"cn";
     //    checkManger.openAPPStoreInsideAPP = YES;
     //    [checkManger checkVersion];
