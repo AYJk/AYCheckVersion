@@ -61,7 +61,15 @@ If you can't get the update info of your App. Set countryAbbreviation of the sal
 checkManger.countryAbbreviation = @"cn";
 ```
 
+set `debugEnable` to print the info in Debug arae
+
+```objc
+checkManger.debugEnable = YES;
+```
+
 # Changelog
+
+v 1.0.1 add debug function, print the info in Debug arae
 
 v 1.0.0 first version
 
@@ -122,7 +130,15 @@ checkManger.openAPPStoreInsideAPP = YES;
 checkManger.countryAbbreviation = @"cn";
 ```
 
+设置`debugEnable`来输出更新信息
+
+```objc
+checkManger.debugEnable = YES;
+```
+
 # 版本更新
+
+v 1.0.1 添加Debug功能，输出当前更新信息
 
 v 1.0.0 首次提交
 
