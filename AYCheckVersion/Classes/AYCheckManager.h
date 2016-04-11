@@ -10,6 +10,10 @@
 
 @interface AYCheckManager : NSObject
 /**
+ *  default if No, set Yes to print the info in Debug arae
+ */
+@property (nonatomic, assign) BOOL debugEnable;
+/**
  *  open APPStore inside your APP, default is No.
  */
 @property (nonatomic, assign) BOOL openAPPStoreInsideAPP;
