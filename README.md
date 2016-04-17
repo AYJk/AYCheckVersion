@@ -126,6 +126,6 @@ checkManger.countryAbbreviation = @"cn";
 
 v 1.0.0 首次提交
 
-# Licence
+# 许可证
 
 AYCheckVersion 使用 MIT 许可证，详情见 LICENSE 文件。	
