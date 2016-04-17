@@ -106,7 +106,9 @@ static AYCheckManager *checkManager = nil;
                     }
                 });
             }
-            NSLog(@"%@   %@",[userDefault objectForKey:APP_LAST_VERSION],[userDefault objectForKey:APP_RELEASE_NOTES]);
+            if (self.debugEnable) {
+                NSLog(@"%@   %@",[userDefault objectForKey:APP_LAST_VERSION],[userDefault objectForKey:APP_RELEASE_NOTES]);
+            }
         }
     }];
     [dataTask resume];

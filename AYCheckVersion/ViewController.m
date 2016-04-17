@@ -20,6 +20,7 @@
     checkManger.countryAbbreviation = @"cn";
     //    checkManger.openAPPStoreInsideAPP = YES;
     //    [checkManger checkVersion];
+    checkManger.debugEnable = YES;
     [checkManger checkVersionWithAlertTitle:@"发现新版本" nextTimeTitle:@"下次提示" confimTitle:@"前往更新"];
 }
 
