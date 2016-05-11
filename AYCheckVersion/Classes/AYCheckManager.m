@@ -92,22 +92,58 @@ static AYCheckManager *checkManager = nil;
                 if ([resultDic[@"version"] isEqualToString:CURRENT_VERSION] || ![[userDefault objectForKey:SKIP_VERSION] isEqualToString:resultDic[@"version"]]) {
                     [userDefault setBool:NO forKey:SKIP_CURRENT_VERSION];
                 }
+                if (self.debugEnable) {
+                    NSLog(@"%@   %@",[userDefault objectForKey:APP_LAST_VERSION],[userDefault objectForKey:APP_RELEASE_NOTES]);
+                }
                 dispatch_async(dispatch_get_main_queue(), ^{
                     
                     if (![[userDefault objectForKey:SKIP_CURRENT_VERSION] boolValue]) {
-                        NSArray *AppStoreVersionArray = [resultDic[@"version"] componentsSeparatedByString:@"."];
+                        NSArray *appStoreVersionArray = [resultDic[@"version"] componentsSeparatedByString:@"."];
                         NSArray *localVersionArray = [CURRENT_VERSION componentsSeparatedByString:@"."];
-                        for (int index = 0; index < AppStoreVersionArray.count; index ++) {
-                            if ([AppStoreVersionArray[index] intValue] > [localVersionArray[index] intValue]) {
-                                [self compareWithCurrentVersion];
+//                        NSString *appStoreVersionString = [NSString string];
+//                        NSString *localVersionString = [NSString string];
+//                        for (NSString *versionNum in appStoreVersionArray) {
+//                            appStoreVersionString = [appStoreVersionString stringByAppendingString:versionNum];
+//                        }
+//                        for (NSString *versionNum in localVersionArray) {
+//                            localVersionString = [localVersionString stringByAppendingString:versionNum];
+//                        }
+//                        if (appStoreVersionArray.count < 3) {
+//                            appStoreVersionString = [appStoreVersionString stringByAppendingString:@"0"];
+//                        }
+//                        if (localVersionArray.count < 3) {
+//                            localVersionString = [localVersionString stringByAppendingString:@"0"];
+//                        }
+//                        AppStoreVersionArray = @[@1,@4,@5];
+//                        localVersionArray = @[@1,@5,@0];
+
+//                            if ([appStoreVersionString intValue] > [localVersionString intValue]) {
+//                                [self compareWithCurrentVersion];
+//                                break;
+//                            }
+                        if (appStoreVersionArray.count < 3) {
+                            appStoreVersionArray = [appStoreVersionArray arrayByAddingObject:@"0"];
+                        }
+                        if (localVersionArray.count < 3) {
+                            localVersionArray = [localVersionArray arrayByAddingObject:@"0"];
+                        }
+                        BOOL isNeedShowAlert = NO;
+                        for (int index = 0; index < appStoreVersionArray.count; index ++) {
+                            if ([appStoreVersionArray[index] intValue] > [localVersionArray[index] intValue]) {
+                                isNeedShowAlert = YES;
+                                break;
+                            }
+                            if ([localVersionArray[index] intValue] > [appStoreVersionArray[index] intValue]) {
+                                isNeedShowAlert = NO;
                                 break;
                             }
                         }
+                        
+                        if (isNeedShowAlert) {
+                            [self compareWithCurrentVersion];
+                        }
                     }
                 });
-            }
-            if (self.debugEnable) {
-                NSLog(@"%@   %@",[userDefault objectForKey:APP_LAST_VERSION],[userDefault objectForKey:APP_RELEASE_NOTES]);
             }
         }
     }];

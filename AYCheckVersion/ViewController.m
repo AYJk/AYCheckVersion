@@ -8,6 +8,9 @@
 
 #import "ViewController.h"
 #import "AYCheckManager.h"
+
+//com.tencent.xin
+//com.facebook.Facebook
 @interface ViewController ()
 
 @end
@@ -21,7 +24,7 @@
     //    checkManger.openAPPStoreInsideAPP = YES;
     //    [checkManger checkVersion];
     checkManger.debugEnable = YES;
-    [checkManger checkVersionWithAlertTitle:@"发现新版本" nextTimeTitle:@"下次提示" confimTitle:@"前往更新"];
+    [checkManger checkVersionWithAlertTitle:@"发现新版本" nextTimeTitle:@"下次提示" confimTitle:@"前往更新" skipVersionTitle:@"跳过当前版本"];
 }
 
 - (void)didReceiveMemoryWarning {
