@@ -2,10 +2,8 @@
 
 [![LICENSE](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/AYJk/AYPageControl/blob/master/License)&nbsp;
 [![SUPPORT](https://img.shields.io/badge/support-iOS%207%2B%20-blue.svg)](https://en.wikipedia.org/wiki/IOS_7)&nbsp;
-![CocoaPods Version](https://img.shields.io/badge/pod-v1.0.0-brightgreen.svg)
+![CocoaPods Version](https://img.shields.io/badge/pod-v1.1.0-brightgreen.svg)
 [![BLOG](https://img.shields.io/badge/blog-ayjkdev.top-orange.svg)](http://ayjkdev.top/)&nbsp;
-
-# 致歉：发现有bug，类似"1.0.0"这样的版本号新上线版本会弹出提示框，解决方案和Bug修复正在进行，非常抱歉！！！给各位带来的不便感到很内疚。我会尽快解决。
 
 我的博客中有详尽的实现过程和相关说明：
 [iOS利用iTunesLookup检查更新](http://ayjkdev.top/2016/04/06/update-in-app-with-itunes-lookup/)
@@ -71,7 +69,9 @@ checkManger.debugEnable = YES;
 
 # Changelog
 
-v 1.0.1 add debug function, print the info in Debug arae
+v 1.1.0 fixed bug
+
+v 1.0.1 add debug switch, print the info in Debug arae
 
 v 1.0.0 first version
 
@@ -140,7 +140,9 @@ checkManger.debugEnable = YES;
 
 # 版本更新
 
-v 1.0.1 添加Debug功能，输出当前更新信息
+v 1.1.0 修复因项目个别version问题导致的bug
+
+v 1.0.1 添加debug开关，输出当前更新信息
 
 v 1.0.0 首次提交
 
