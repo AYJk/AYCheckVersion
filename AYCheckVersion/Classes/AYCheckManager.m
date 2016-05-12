@@ -98,48 +98,7 @@ static AYCheckManager *checkManager = nil;
                 dispatch_async(dispatch_get_main_queue(), ^{
                     
                     if (![[userDefault objectForKey:SKIP_CURRENT_VERSION] boolValue]) {
-                        NSArray *appStoreVersionArray = [resultDic[@"version"] componentsSeparatedByString:@"."];
-                        NSArray *localVersionArray = [CURRENT_VERSION componentsSeparatedByString:@"."];
-//                        NSString *appStoreVersionString = [NSString string];
-//                        NSString *localVersionString = [NSString string];
-//                        for (NSString *versionNum in appStoreVersionArray) {
-//                            appStoreVersionString = [appStoreVersionString stringByAppendingString:versionNum];
-//                        }
-//                        for (NSString *versionNum in localVersionArray) {
-//                            localVersionString = [localVersionString stringByAppendingString:versionNum];
-//                        }
-//                        if (appStoreVersionArray.count < 3) {
-//                            appStoreVersionString = [appStoreVersionString stringByAppendingString:@"0"];
-//                        }
-//                        if (localVersionArray.count < 3) {
-//                            localVersionString = [localVersionString stringByAppendingString:@"0"];
-//                        }
-//                        AppStoreVersionArray = @[@1,@4,@5];
-//                        localVersionArray = @[@1,@5,@0];
-
-//                            if ([appStoreVersionString intValue] > [localVersionString intValue]) {
-//                                [self compareWithCurrentVersion];
-//                                break;
-//                            }
-                        if (appStoreVersionArray.count < 3) {
-                            appStoreVersionArray = [appStoreVersionArray arrayByAddingObject:@"0"];
-                        }
-                        if (localVersionArray.count < 3) {
-                            localVersionArray = [localVersionArray arrayByAddingObject:@"0"];
-                        }
-                        BOOL isNeedShowAlert = NO;
-                        for (int index = 0; index < appStoreVersionArray.count; index ++) {
-                            if ([appStoreVersionArray[index] intValue] > [localVersionArray[index] intValue]) {
-                                isNeedShowAlert = YES;
-                                break;
-                            }
-                            if ([localVersionArray[index] intValue] > [appStoreVersionArray[index] intValue]) {
-                                isNeedShowAlert = NO;
-                                break;
-                            }
-                        }
-                        
-                        if (isNeedShowAlert) {
+                        if ([self floatForVersion:resultDic[@"version"]] > [self floatForVersion:CURRENT_VERSION]) {
                             [self compareWithCurrentVersion];
                         }
                     }
@@ -148,6 +107,19 @@ static AYCheckManager *checkManager = nil;
         }
     }];
     [dataTask resume];
+}
+
+
+- (double)floatForVersion:(NSString *)version {
+    NSArray *versionArray = [version componentsSeparatedByString:@"."];
+    NSMutableString *versionString = @"".mutableCopy;
+    for (int i = 0; i < versionArray.count; i++) {
+        [versionString appendString:versionArray[i]];
+        if (!i) {
+            [versionString appendString:@"."];
+        }
+    }
+    return versionString.doubleValue;
 }
 
 - (void)compareWithCurrentVersion {
