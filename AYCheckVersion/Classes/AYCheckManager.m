@@ -92,13 +92,15 @@ static AYCheckManager *checkManager = nil;
                 if ([resultDic[@"version"] isEqualToString:CURRENT_VERSION] || ![[userDefault objectForKey:SKIP_VERSION] isEqualToString:resultDic[@"version"]]) {
                     [userDefault setBool:NO forKey:SKIP_CURRENT_VERSION];
                 }
+                [userDefault synchronize];
+
                 if (self.debugEnable) {
                     NSLog(@"%@   %@",[userDefault objectForKey:APP_LAST_VERSION],[userDefault objectForKey:APP_RELEASE_NOTES]);
                 }
                 dispatch_async(dispatch_get_main_queue(), ^{
                     
                     if (![[userDefault objectForKey:SKIP_CURRENT_VERSION] boolValue]) {
-                        if ([self floatForVersion:resultDic[@"version"]] > [self floatForVersion:CURRENT_VERSION]) {
+                        if (![self isEqualByCompareLastVersion:resultDic[@"version"] withCurrentVersion:CURRENT_VERSION]) {
                             [self compareWithCurrentVersion];
                         }
                     }
@@ -109,6 +111,23 @@ static AYCheckManager *checkManager = nil;
     [dataTask resume];
 }
 
+/**
+ * 比较当前版本号是否与沙盒中的版本号相同
+ */
+- (BOOL)isEqualByCompareLastVersion:(NSString *)lastVersion withCurrentVersion:(NSString *)currentVersion
+{
+    NSArray *lastVersionArray = [lastVersion componentsSeparatedByString:@"."];
+    NSArray *currentVersionArray = [currentVersion componentsSeparatedByString:@"."];
+    if (lastVersionArray.count != currentVersionArray.count) {
+        return NO;
+    }
+    for (int i = 0; i < lastVersionArray.count; i++) {
+        if ([currentVersionArray[i] integerValue] != [lastVersionArray[i] integerValue]) {
+            return NO;
+        }
+    }
+    return YES;
+}
 
 - (double)floatForVersion:(NSString *)version {
     NSArray *versionArray = [version componentsSeparatedByString:@"."];
