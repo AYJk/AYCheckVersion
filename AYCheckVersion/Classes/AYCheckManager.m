@@ -77,9 +77,11 @@ static AYCheckManager *checkManager = nil;
     NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         
         NSHTTPURLResponse *urlResponse = (NSHTTPURLResponse *)response;
-        
+        if (data == nil) {
+            return ;
+        }
         if (urlResponse.statusCode == REQUEST_SUCCEED) {
-            NSDictionary *responseDic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+            NSDictionary *responseDic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
             NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
             if ([responseDic[@"resultCount"] intValue] == 1) {
                 
@@ -93,10 +95,9 @@ static AYCheckManager *checkManager = nil;
                     [userDefault setBool:NO forKey:SKIP_CURRENT_VERSION];
                 }
                 [userDefault synchronize];
-
-                if (self.debugEnable) {
-                    NSLog(@"%@   %@",[userDefault objectForKey:APP_LAST_VERSION],[userDefault objectForKey:APP_RELEASE_NOTES]);
-                }
+#ifdef DEBUG
+                NSLog(@"*****************\nAPP_LAST_VERSION:\n%@\nAPP_RELEASE_NOTES:\n%@\n*****************",[userDefault objectForKey:APP_LAST_VERSION],[userDefault objectForKey:APP_RELEASE_NOTES]);
+#endif
                 dispatch_async(dispatch_get_main_queue(), ^{
                     
                     if (![[userDefault objectForKey:SKIP_CURRENT_VERSION] boolValue]) {
@@ -114,15 +115,14 @@ static AYCheckManager *checkManager = nil;
 /**
  * 比较当前版本号是否与沙盒中的版本号相同
  */
-- (BOOL)isEqualByCompareLastVersion:(NSString *)lastVersion withCurrentVersion:(NSString *)currentVersion
-{
+- (BOOL)isEqualByCompareLastVersion:(NSString *)lastVersion withCurrentVersion:(NSString *)currentVersion {
     NSArray *lastVersionArray = [lastVersion componentsSeparatedByString:@"."];
     NSArray *currentVersionArray = [currentVersion componentsSeparatedByString:@"."];
     if (lastVersionArray.count != currentVersionArray.count) {
         return NO;
     }
-    for (int i = 0; i < lastVersionArray.count; i++) {
-        if ([currentVersionArray[i] integerValue] != [lastVersionArray[i] integerValue]) {
+    for (int index = 0; index < lastVersionArray.count; index++) {
+        if ([currentVersionArray[index] integerValue] != [lastVersionArray[index] integerValue]) {
             return NO;
         }
     }
@@ -132,9 +132,9 @@ static AYCheckManager *checkManager = nil;
 - (double)floatForVersion:(NSString *)version {
     NSArray *versionArray = [version componentsSeparatedByString:@"."];
     NSMutableString *versionString = @"".mutableCopy;
-    for (int i = 0; i < versionArray.count; i++) {
-        [versionString appendString:versionArray[i]];
-        if (!i) {
+    for (int index = 0; index < versionArray.count; index++) {
+        [versionString appendString:versionArray[index]];
+        if (!index) {
             [versionString appendString:@"."];
         }
     }
@@ -179,9 +179,7 @@ static AYCheckManager *checkManager = nil;
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     
-    if (buttonIndex == 0) {
-
-    } else {
+    if (buttonIndex != 0) {
         
         [self openAPPStore];
     }
