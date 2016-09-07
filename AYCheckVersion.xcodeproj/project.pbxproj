@@ -387,7 +387,7 @@
 				INFOPLIST_FILE = AYCheckVersion/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yitoujf.YiTouJF;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.xin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = "ad hoc distribution";
@@ -504,7 +504,7 @@
 				INFOPLIST_FILE = AYCheckVersion/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yitoujf.YiTouJF;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.xin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -517,7 +517,7 @@
 				INFOPLIST_FILE = AYCheckVersion/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yitoujf.YiTouJF;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.xin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
