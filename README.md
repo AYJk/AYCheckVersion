@@ -7,82 +7,11 @@
 
 我的博客中有详尽的实现过程和相关说明：
 [iOS利用iTunesLookup检查更新](http://ayjkdev.top/2016/04/06/update-in-app-with-itunes-lookup/)
-[中文介绍](https://github.com/AYJk/AYCheckVersion#中文介绍)
 
-This is a utility class to check version from AppStore. 
-
-![两个按钮情况](http://7xrofo.com1.z0.glb.clouddn.com/Simulator%20Screen%20Shot%202016%E5%B9%B44%E6%9C%887%E6%97%A5%20%E4%B8%8B%E5%8D%8811.24.14.png)        ![三个按钮情况](http://7xrofo.com1.z0.glb.clouddn.com/Simulator%20Screen%20Shot%202016%E5%B9%B44%E6%9C%887%E6%97%A5%20%E4%B8%8B%E5%8D%8811.25.06.png)
-
-# Installtion
-The preferred way of installtion is via [CocoaPods](http://cocoapods.org/)
-
-```ruby
-pod 'AYCheckVersion'
-```
-
-and run `pod install` or `pod update`. It will install the most recent version of AYCheckVersion.
-
-After that import \<AYCheckVersion/AYCheckVersion.h\>.
-
-Use AYCheckVersion
-
-# Usage
-
-```objc
-AYCheckManager *checkManger = [AYCheckManager sharedCheckManager];
-[checkManger checkVersion];
-```
-start check version with default param.
-
-```objc
-- (void)checkVersion;
-```
-
-start check version with AlertTitle,NextTimeTitle,ConfimTitle.
-
-```objc
-- (void)checkVersionWithAlertTitle:(NSString *)alertTitle nextTimeTitle:(NSString *)nextTimeTitle confimTitle:(NSString *)confimTitle;
-```
-
-start check version with AlertTitle,NextTimeTitle,ConfimTitle,skipVersionTitle.
-
-```objc
-- (void)checkVersionWithAlertTitle:(NSString *)alertTitle nextTimeTitle:(NSString *)nextTimeTitle confimTitle:(NSString *)confimTitle skipVersionTitle:(NSString *)skipVersionTitle;
-```
-
-If you want open AppStore inside your App, set `openAPPStoreInsideAPP`
-
-```objc
-checkManger.openAPPStoreInsideAPP = YES;
-```
-If you can't get the update info of your App. Set countryAbbreviation of the sale area. like `countryAbbreviation = @"cn"`,`countryAbbreviation = @"us"`.General, you don't need to set this property
-
-```objc
-checkManger.countryAbbreviation = @"cn";
-```
-
-set `debugEnable` to print the info in Debug arae
-
-```objc
-checkManger.debugEnable = YES;
-```
-
-# Changelog
-
-v 1.1.0 fixed bug
-
-v 1.0.1 add debug switch, print the info in Debug arae
-
-v 1.0.0 first version
-
-# Licence
-AYCheckVersion is provided under the MIT license. See LICENSE file for details.	
-
-=================
-# 中文介绍
+# 介绍
 
 这是一个从AppStore检测最新版本的工具类。
-
+*Debug环境下输出取回的应用更新信息，Release环境下不输出*
 # 安装
 
 推荐使用[CocoaPods](http://cocoapods.org/)进行安装。
@@ -132,13 +61,9 @@ checkManger.openAPPStoreInsideAPP = YES;
 checkManger.countryAbbreviation = @"cn";
 ```
 
-设置`debugEnable`来输出更新信息
-
-```objc
-checkManger.debugEnable = YES;
-```
-
 # 版本更新
+
+v 1.1.2 修复由于iTunes被墙使返回的data为nil所导致的异常 [issues3](https://github.com/AYJk/AYCheckVersion/issues/3)，去除debug开关，debug环境下默认输出更新内容
 
 v 1.1.0 修复因项目个别version问题导致的bug
 
@@ -149,3 +74,5 @@ v 1.0.0 首次提交
 # 许可证
 
 AYCheckVersion 使用 MIT 许可证，详情见 LICENSE 文件。	
+
+
