@@ -115,18 +115,41 @@ static AYCheckManager *checkManager = nil;
 /**
  * 比较当前版本号是否与沙盒中的版本号相同
  */
+//- (BOOL)isEqualByCompareLastVersion:(NSString *)lastVersion withCurrentVersion:(NSString *)currentVersion {
+//    NSArray *lastVersionArray = [lastVersion componentsSeparatedByString:@"."];
+//    NSArray *currentVersionArray = [currentVersion componentsSeparatedByString:@"."];
+//    if (lastVersionArray.count != currentVersionArray.count) {
+//        return NO;
+//    }
+//    for (int index = 0; index < lastVersionArray.count; index++) {
+//        if ([currentVersionArray[index] integerValue] != [lastVersionArray[index] integerValue]) {
+//            return NO;
+//        }
+//    }
+//    return YES;
+//}
+
 - (BOOL)isEqualByCompareLastVersion:(NSString *)lastVersion withCurrentVersion:(NSString *)currentVersion {
-    NSArray *lastVersionArray = [lastVersion componentsSeparatedByString:@"."];
-    NSArray *currentVersionArray = [currentVersion componentsSeparatedByString:@"."];
-    if (lastVersionArray.count != currentVersionArray.count) {
-        return NO;
+    NSMutableArray *lastVersionArray = [[lastVersion componentsSeparatedByString:@"."] mutableCopy];
+    NSMutableArray *currentVersionArray = [[currentVersion componentsSeparatedByString:@"."] mutableCopy];
+    int modifyCount = abs((int)(lastVersionArray.count - currentVersionArray.count));
+    if (lastVersionArray.count > currentVersionArray.count) {
+        for (int index = 0; index < modifyCount; index ++) {
+            [currentVersionArray addObject:@"0"];
+        }
+    } else if (lastVersionArray.count < currentVersionArray.count) {
+        for (int index = 0; index < modifyCount; index ++) {
+            [lastVersionArray addObject:@"0"];
+        }
     }
     for (int index = 0; index < lastVersionArray.count; index++) {
-        if ([currentVersionArray[index] integerValue] != [lastVersionArray[index] integerValue]) {
+        if ([currentVersionArray[index] integerValue] > [lastVersionArray[index] integerValue]) {
+            return YES;
+        } else if ([currentVersionArray[index] integerValue] < [lastVersionArray[index] integerValue]) {
             return NO;
         }
     }
-    return YES;
+    return NO;
 }
 
 - (double)floatForVersion:(NSString *)version {
