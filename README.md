@@ -2,8 +2,7 @@
 
 [![LICENSE](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/AYJk/AYPageControl/blob/master/License)&nbsp;
 [![SUPPORT](https://img.shields.io/badge/support-iOS%207%2B%20-blue.svg)](https://en.wikipedia.org/wiki/IOS_7)&nbsp;
-![CocoaPods Version](https://img.shields.io/badge/pod-v1.1.0-brightgreen.svg)
-[![BLOG](https://img.shields.io/badge/blog-ayjkdev.top-orange.svg)](http://ayjkdev.top/)&nbsp;
+![CocoaPods Version](https://img.shields.io/badge/pod-v1.3.0-brightgreen.svg)&nbsp;
 
 我的博客中有详尽的实现过程和相关说明：
 [iOS利用iTunesLookup检查更新](http://ayjkdev.top/2016/04/06/update-in-app-with-itunes-lookup/)
@@ -62,6 +61,10 @@ checkManger.countryAbbreviation = @"cn";
 ```
 
 # 版本更新
+
+v 1.3.0 解决CDN缓存导致的更新延迟问题。[issues9](https://github.com/AYJk/AYCheckVersion/issues/9)
+
+v 1.2.0 修复个别线上版本号和提审版本号带来的问题
 
 v 1.1.2 修复由于iTunes被墙使返回的data为nil所导致的异常 [issues3](https://github.com/AYJk/AYCheckVersion/issues/3)，去除debug开关，debug环境下默认输出更新内容
 
