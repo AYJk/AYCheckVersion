@@ -61,6 +61,7 @@ checkManger.countryAbbreviation = @"cn";
 ```
 
 # 版本更新
+v 1.3.5 解决修复苹果修改数据格式造成的问题。[issues10](https://github.com/AYJk/AYCheckVersion/issues/10)
 
 v 1.3.0 解决CDN缓存导致的更新延迟问题。[issues9](https://github.com/AYJk/AYCheckVersion/issues/9)
 
